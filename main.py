@@ -45,7 +45,6 @@ while True:
         volume_level = np.interp(volume_percentage, [0, 100], [min_volume, max_volume])
         volume.SetMasterVolumeLevel(volume_level, None)
 
-        # Display the volume percentage on the frame
         cv2.putText(img, f'Volume: {int(volume_percentage)} %', (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 3)
 
     cv2.imshow('Image', img)
